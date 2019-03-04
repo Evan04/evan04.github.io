@@ -48,7 +48,7 @@
 
     $.getJSON(staticUrl, function(data) {
 
-        iw = window.innerWidth;
+        iw = window.innerWidth - 100;
         console.log(iw);
         
         country1Data = data.fact[1].Value;
@@ -84,9 +84,17 @@
         val3 = parseInt(val3);
         console.log(val3);
 
-        document.getElementById("div1").style.width = val1+"px";
-        document.getElementById("div2").style.width = val2+"px";
-        document.getElementById("div3").style.width = val3+"px";
+        largest = Math.max(val1,val2,val3)
+        console.log(largest);
+
+        val1s = val1/largest*iw
+        val2s = val2/largest*iw
+        val3s = val3/largest*iw
+
+
+        document.getElementById("div1").style.width = val1s+"px";
+        document.getElementById("div2").style.width = val2s+"px";
+        document.getElementById("div3").style.width = val3s+"px";
 
         document.getElementById("p1").innerHTML = "<pre>"+data.fact[1].dims.COUNTRY + " : "+val1+"</pre>"
         document.getElementById("p2").innerHTML = "<pre>"+data.fact[2].dims.COUNTRY + " : "+val2+"</pre>"
