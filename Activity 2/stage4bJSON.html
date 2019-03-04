@@ -2,7 +2,7 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<title>Stage 4a JSON Activity</title>
+	<title>Stage 4b JSON Activity</title>
 
     <style>
 
@@ -47,6 +47,9 @@
     var staticUrl = 'https://raw.githubusercontent.com/Evan04/evan04.github.io/master/Activity%202/data/HIVinfection.json '; 
 
     $.getJSON(staticUrl, function(data) {
+
+        iw = window.innerWidth;
+        console.log(iw);
         
         country1Data = data.fact[1].Value;
         console.log(data);
