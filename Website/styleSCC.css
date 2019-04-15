@@ -1,0 +1,189 @@
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body {font-family: "Lato", sans-serif;}
+
+                    /************************************************************************/
+
+.parallax {
+
+  background-image: url("file:///Users/evan.van/Desktop/sdg-cover-11-1.jpg");
+
+
+  min-height: 450px; 
+
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+                    /************************************************************************/
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  position: relative;
+  left: 250px;
+
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+                    /************************************************************************/
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+                    /************************************************************************/
+
+img {
+  position: relative;
+  top: -655px;
+  left: 1200px;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+                    /************************************************************************/
+
+.flip-box {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+    top: -220px;
+    left: 125px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    background-color: #bbb;
+    color: white;
+    font-size: 40;
+    font-family: "Lato", sans-serif;
+    border-radius: 30px;
+  }
+
+  .flip-box-back {
+    background-color: dodgerblue ;
+    color: white;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    border-radius: 30px;
+    transform: rotateY(180deg);
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap:wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .flex-container > div {
+  padding: 50px;
+  }
+
+                      /************************************************************************/
+
+p.groove1 {
+  border-style: groove;
+  height: 33px;
+  position: relative;
+  top: -200px;
+  left: 120px;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+}
+
+p.groove2 {
+  border-style: groove;
+  height: 33px;
+  position: relative;
+  top: -197px;
+  left: 120px;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+}
+
+p.groove3 {
+  border-style: groove;
+  height: 33px;
+  position: relative;
+  top: -196px;
+  left: 120px;
+  font-size: 18px;
+  font-family: Lato, sans-serif;
+}
+
+</style>
